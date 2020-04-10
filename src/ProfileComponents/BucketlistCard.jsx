@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Card, Image, Header } from 'semantic-ui-react'
+import { Card, Image, Header, Button } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 class BucketlistCard extends Component {
 
@@ -8,16 +9,20 @@ class BucketlistCard extends Component {
     }
 
     render() {
-        
+
         let {name, photo} = this.props.bucketlistItem.destination
         return (
-            <Card className="bucketlist-card">
+          <div>
+            <Link  key={this.props.bucketlistItem.destination.id} to={`/${this.props.bucketlistItem.destination.id}`}>
+                <Card className="bucketlist-card">
                 <Image className="bucketlist-image" src={photo} alt="bucketlist destination"/>
                 <Card.Content className="buckelist-content">
                     <Header className="bucketlist-header">{name}</Header>
-                    <span className="bucketlist-delete-btn" onClick={this.handleDelete}>&times;</span>
                 </Card.Content>
             </Card>
+            </Link>
+            <Button icon="trash" onClick={this.handleDelete}/>
+          </div>
         );
     }
 }

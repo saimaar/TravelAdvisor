@@ -8,14 +8,12 @@ class BucketlistContainer extends Component {
 
 
   render() {
-    console.log(this.props.bucketlist);
     let bucketlistDestination = !this.props.bucketlist ? null :
      this.props.bucketlist.map(bucketlistItem =>
-        <Link  key={bucketlistItem.destination.id} to={`/${bucketlistItem.destination.id}`}>
           <BucketlistCard  key={bucketlistItem.id}
           bucketlistItem={bucketlistItem}
           routerProps={this.props.routerProps}
-          deleteBucketItem={this.props.deleteBucketItem}/></Link>)
+          deleteBucketItem={this.props.deleteBucketItem}/>)
 
     return (
       <Container className="bucketlist-container">
