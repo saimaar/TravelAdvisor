@@ -47,7 +47,6 @@ class ShowContainer extends Component {
   }
 
   deleteReview = (review_id) => {
-
     fetch(`https://travel-advisor-api.herokuapp.com/reviews/${review_id}`, {
       method: "DELETE"
     })
@@ -60,8 +59,6 @@ class ShowContainer extends Component {
       })
     })
   }
-
-
 
   addToBucketList = (notifyAdd) => {
       fetch('https://travel-advisor-api.herokuapp.com/add_joiners', {
