@@ -166,22 +166,15 @@ body{
 }
 
 .welcome-container{
-  padding-left: 6vw;
-  padding-right: 6vw;
-  padding-bottom: 1.5vh;
-  padding-top: 1.5vh;
-  background-color: #15ddab;
-  width: 5vw;
-  margin-left: 1vw;
-  margin-top: 10vh;
+margin-top: 12vw !important;
+margin-left: 5vw !important;
 }
 
-.welcome-message{
+/* .welcome-message{
   font-weight: bold;
   font-size: 1vw;
   margin-left: -4.8vw;
-  width: 15vw;
-}
+}  */
 
 /* home page destination cards */
 .destination-container{

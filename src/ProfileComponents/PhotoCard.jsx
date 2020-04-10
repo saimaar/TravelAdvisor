@@ -25,16 +25,16 @@ class PhotoCard extends Component {
 
   handleDelete = () => {
     this.props.deleteProfile(this.props.profile_info.id)
-  }  
-  
+  }
+
   render() {
-    
+
     let { username, picture, bio } = this.props.profile_info
 
     return (
         <Segment className="photo-container">
           <div className="photo-header-container">
-            <Image className="profile-picture" src={picture} alt={username} />
+            <Image className="profile-picture" src={this.props.profile_info.picture === "" ? 'https://react.semantic-ui.com/images/avatar/small/veronika.jpg' : {picture}} alt={username} />
             <div className="photo-contribution-container">
               <span className="photo-contribution-title">Contributions</span>
               <span className="photo-contribution-number">{this.allReviews()}</span>
@@ -49,7 +49,7 @@ class PhotoCard extends Component {
             <Dropdown icon='cog' className="profile-delete-btn">
               <Dropdown.Menu>
                 <Dropdown.Item
-                  text='Delete Profile' 
+                  text='Delete Profile'
                   value='delete'
                   onClick={this.handleDelete}
                   />
