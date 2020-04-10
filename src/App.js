@@ -74,7 +74,7 @@ class App extends Component {
       }
     })
 
-    
+
 
   }
 
@@ -101,6 +101,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.user);
     let destinationsId = this.state.destinations.map(destination => destination.id)
 
     return (

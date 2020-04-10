@@ -4,11 +4,12 @@ import PhotoContainer from './PhotoContainer'
 import ThingsToDoContainer from './ThingsToDoContainer'
 import NotFound from '../NotFound'
 import { Card, Header } from 'semantic-ui-react'
+import { Divider, Form, Label } from 'semantic-ui-react'
 
 class ShowContainer extends Component {
 
   state = {
-
+    clicked: false,
   }
 
   componentDidMount() {
@@ -60,7 +61,9 @@ class ShowContainer extends Component {
     })
   }
 
-  addToBucketList = () => {
+
+
+  addToBucketList = (notifyAdd) => {
       fetch('https://travel-advisor-api.herokuapp.com/add_joiners', {
         method: "POST",
         headers: {
@@ -75,22 +78,27 @@ class ShowContainer extends Component {
       .then(add_joiner => {
           let newAddJoiner = [...this.state.add_joiners, add_joiner]
           this.setState({
-            add_joiners: newAddJoiner
-          })
+            add_joiners: newAddJoiner,
+            clicked: !this.state.clicked
+        })
       })
   }
 
 
   render() {
+    console.log(this.state.clicked);
     let { things_to_dos } = this.state
     let thingsToDo = !things_to_dos ? null : things_to_dos.map(thingstodo => <ThingsToDoContainer key={thingstodo.id} thingstodo={thingstodo}/>)
-
+    let notifyAdd =  this.state.clicked ? <Label size ="teal" basic color='black' pointing='right'>
+          Added to your bucketlist!
+        </Label> : null
     return (
       <div>
         {this.props.destinationsId.includes(parseInt(this.props.routerProps.match.params.id)) ?
           <div>
             <div onClick={this.addToBucketList} className="add-to-bucketlist" hidden={localStorage.token ? false : true}>+ Add to bucketlist</div>
-            <PhotoContainer destination={this.state}/>
+            {notifyAdd}
+        <PhotoContainer destination={this.state}/>
             <Header className="things-to-do-container-header">Things to Do</Header>
             <Card.Group className="things-to-do-container">{thingsToDo}</Card.Group>
             <CommentContainer routerProps={this.props.routerProps} deleteReview={this.deleteReview} createComment={this.createComment} destination={this.state} user={this.props.user} />
@@ -102,7 +110,7 @@ class ShowContainer extends Component {
         }
       </div>
     );
-  } 
+  }
 }
 
 export default ShowContainer;
