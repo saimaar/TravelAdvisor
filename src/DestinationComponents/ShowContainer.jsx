@@ -86,7 +86,6 @@ class ShowContainer extends Component {
 
 
   render() {
-    console.log(this.state.clicked);
     let { things_to_dos } = this.state
     let thingsToDo = !things_to_dos ? null : things_to_dos.map(thingstodo => <ThingsToDoContainer key={thingstodo.id} thingstodo={thingstodo}/>)
     let notifyAdd =  this.state.clicked ? <Label size ="teal" basic color='black' pointing='right'>
