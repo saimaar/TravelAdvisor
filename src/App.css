@@ -602,3 +602,16 @@ img.ui.image.things-to-do-image{
   margin: auto !important;
   margin-top: 8vh !important;
 }
+
+
+.buckNotify{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.notifyAdd{
+    right: 13vw;
+    position: absolute !important;
+    bottom: 0.5vw;
+}

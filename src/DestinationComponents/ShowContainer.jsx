@@ -88,15 +88,17 @@ class ShowContainer extends Component {
   render() {
     let { things_to_dos } = this.state
     let thingsToDo = !things_to_dos ? null : things_to_dos.map(thingstodo => <ThingsToDoContainer key={thingstodo.id} thingstodo={thingstodo}/>)
-    let notifyAdd =  this.state.clicked ? <Label size ="teal" basic color='black' pointing='right'>
+    let notifyAdd =  this.state.clicked ? <Label pointing ="right" className="notifyAdd" size ="teal" basic color='black' >
           Added to your bucketlist!
         </Label> : null
     return (
       <div>
         {this.props.destinationsId.includes(parseInt(this.props.routerProps.match.params.id)) ?
           <div>
-            <div onClick={this.addToBucketList} className="add-to-bucketlist" hidden={localStorage.token ? false : true}>+ Add to bucketlist</div>
-            {notifyAdd}
+            <div className="buckNotify">
+          {notifyAdd}
+          <div onClick={this.addToBucketList} className="add-to-bucketlist" hidden={localStorage.token ? false : true}>+ Add to bucketlist </div>
+            </div>
         <PhotoContainer destination={this.state}/>
             <Header className="things-to-do-container-header">Things to Do</Header>
             <Card.Group className="things-to-do-container">{thingsToDo}</Card.Group>
