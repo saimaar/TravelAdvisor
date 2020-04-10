@@ -34,7 +34,7 @@ class PhotoCard extends Component {
     return (
         <Segment className="photo-container">
           <div className="photo-header-container">
-            <Image className="profile-picture" src={this.props.profile_info.picture === "" ? 'https://react.semantic-ui.com/images/avatar/small/veronika.jpg' : {picture}} alt={username} />
+            <Image className="profile-picture" src={this.props.profile_info.picture === "" ? 'https://react.semantic-ui.com/images/avatar/small/veronika.jpg' : this.props.profile_info.picture } alt={username} />
             <div className="photo-contribution-container">
               <span className="photo-contribution-title">Contributions</span>
               <span className="photo-contribution-number">{this.allReviews()}</span>
