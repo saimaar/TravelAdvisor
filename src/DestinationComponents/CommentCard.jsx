@@ -13,8 +13,9 @@ class CommentCard extends Component {
           return <span className="review-delete-button" onClick={this.handleDelete}>&times;</span>
       }
   }
-  
+
   render() {
+    console.log(this.props.review);
     let {comment, rating, username} = this.props.review
 
     return (

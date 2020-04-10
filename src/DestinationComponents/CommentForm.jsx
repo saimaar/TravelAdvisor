@@ -11,7 +11,7 @@ class CommentForm extends Component {
 
   handleChange = (event, { rating }) => {
     let {name, value} = event.target
-    
+
     this.setState({
         [name]: value,
         rating
@@ -21,7 +21,6 @@ class CommentForm extends Component {
   handleSubmit=(evt)=>{
     evt.preventDefault()
     this.props.createComment(this.state)
-    
     this.setState({
       comment: "",
       rating: 0
@@ -42,12 +41,13 @@ class CommentForm extends Component {
           onChange={this.handleChange}
         />
         <Rating
+          defaultRating={1}
           className="comment-form-rating"
           icon="star"
           name="rating"
           onRate={this.handleChange}
-          maxRating={5} 
-          clearable
+          maxRating={5}
+
         />
         <br/>
         <Button className="create-review-button" type='submit'>Submit</Button>

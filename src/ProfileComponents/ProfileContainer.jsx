@@ -51,9 +51,9 @@ class ProfileContainer extends Component {
       this.props.routerProps.history.push("/")
     })
   }
-  
-  render() {
 
+  render() {
+// console.log(this.state);
     let { bucketlist } = this.state
 
     return (

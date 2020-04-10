@@ -353,11 +353,12 @@ img.ui.image.things-to-do-image{
 }
 
 .review-username{
-  font-size: 0.8vw;
-  margin-bottom: 0.5vh;
-  margin-left: 2vw;
-  margin-top: -2.7vh;
-  text-decoration: underline;
+font-size: 1.2vw;
+color: darkgreen;
+margin-bottom: 0.5vh;
+margin-left: 2.58vw;
+margin-top: -2.7vh;
+text-decoration: underline;
 }
 
 .comment-rating-card{
