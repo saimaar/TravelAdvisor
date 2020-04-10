@@ -42,7 +42,16 @@ body{
   margin-bottom: -1vh !important;
   border-bottom: #000000 !important;
 }
-
+.home-btn{
+margin-left: 0vw !important;
+color: #000000 !important;
+font-size: 1.1vw !important;
+font-weight: bold !important;
+padding-bottom: -1vh !important;
+background-color: #ffffff !important;
+border-radius: 0vw !important;
+border-bottom: solid #ffffff !important;
+}
 .profile-btn{
   margin-left: 2vw !important;
   color: #000000 !important;
@@ -73,7 +82,6 @@ body{
 }
 
 .sign-up-btn{
-  margin-left: 2vw !important;
   color: #000000 !important;
   font-size: 1.1vw !important;
   font-weight: bold !important;

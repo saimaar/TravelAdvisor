@@ -21,13 +21,16 @@ class HeaderContainer extends Component {
           </div>
         </Link>
         <Header className="header-buttons">
-          {localStorage.token ? 
+          {localStorage.token ?
             <>
               <Link to="/profile" >
                 <Button className="profile-btn">Profile</Button>
-              </Link> 
+              </Link>
               <Button className="logout-btn" onClick={this.logOutUser}>Logout</Button>
-            </> : 
+              <Link to="/" >
+              <Button className="home-btn">Home</Button>
+              </Link>
+            </> :
             <>
             <Modal trigger={<Button className="sign-up-btn">Log in</Button>}>
               <Login error={this.props.error} loginUser={this.props.loginUser} history={this.props.historyProps.history}/>
@@ -35,6 +38,9 @@ class HeaderContainer extends Component {
             <Modal trigger={<Button className="sign-up-btn">Sign up</Button>}>
             <SignUp createNewUser={this.props.createNewUser} history={this.props.historyProps.history}/>
           </Modal>
+          <Link to="/" >
+          <Button className="home-btn">Home</Button>
+          </Link>
           </>
           }
         </Header>
