@@ -21,7 +21,7 @@ class BucketlistCard extends Component {
                 </Card.Content>
             </Card>
             </Link>
-            <Button icon="trash" onClick={this.handleDelete}/>
+            <Button size="big" fluid icon="trash" onClick={this.handleDelete}/>
           </div>
         );
     }
