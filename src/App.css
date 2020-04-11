@@ -494,18 +494,20 @@ text-decoration: underline;
 .bucketlist-container{
   height: 100vh;
   margin-top: 10vh !important;
-  background-color: #aed7e9;
+  background-color: white !important;
 }
 
 .bucketlist-container-header{
+  font-family: 'Pacifico', cursive !important;
   margin-left: 1.5vw !important;
-  font-size: 2vw !important;
-  text-decoration: underline;
+  font-size: 3vw !important;
   position: relative;
   position: relative;
-      left: 32vw;
-      top: 0;
+  left: 32vw;
+  top: 0;
 }
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Pacifico', cursive; */
 
 .bucketlist-group-card{
   margin-top: 4vh !important;
