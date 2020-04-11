@@ -492,17 +492,26 @@ text-decoration: underline;
 
 /* bucketlist container css */
 .bucketlist-container{
+  height: 100vh;
   margin-top: 10vh !important;
+  background-color: #aed7e9;
 }
 
 .bucketlist-container-header{
   margin-left: 1.5vw !important;
   font-size: 2vw !important;
   text-decoration: underline;
+  position: relative;
+  position: relative;
+      left: 32vw;
+      top: 0;
 }
 
 .bucketlist-group-card{
   margin-top: 4vh !important;
+      padding: 2vw;
+      padding-left: 10vw;
+
 }
 
 .bucketlist-card{

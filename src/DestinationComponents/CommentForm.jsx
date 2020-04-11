@@ -30,7 +30,6 @@ class CommentForm extends Component {
 
   render() {
     return (
-
       <Form onSubmit={this.handleSubmit} hidden={localStorage.token ? false : true}>
         <TextareaAutosize
           className="comment-form-input"
@@ -41,12 +40,12 @@ class CommentForm extends Component {
           onChange={this.handleChange}
         />
         <Rating
-          defaultRating={1}
           className="comment-form-rating"
           icon="star"
           name="rating"
           onRate={this.handleChange}
           maxRating={5}
+          rating={this.state.rating}
 
         />
         <br/>
