@@ -1,6 +1,14 @@
 <h1 align="center">Travel Advisor 🛫</h1>
 
-A `React and Rails` App designed as a rating traveling app that offers a large selection of destinations throughout the world.
+<h4 align="center">A `React and Rails` App designed as a rating traveling app that offers a large selection of destinations throughout the world.</h4>
+
+<p align="center">
+  <img max-height: 90% width="100%" src="src/images/tone.gif" alt="gif of the app">
+</p>
+  
+  
+
+
 
 ***➡️ Link to [Demo](https://www.youtube.com/watch?v=1ZLSS1F6WBs&t=1s)***<br/>
 ***➡️ Link to [Live website](https://travel-advisor-app.herokuapp.com/)***<br/>
