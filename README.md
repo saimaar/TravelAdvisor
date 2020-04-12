@@ -54,7 +54,7 @@ Before you begin, ensure you have installed the latest version of:
 To launch the app you'll have to follow the following steps:
 
 **Back End setup**
-- Clone this following repo here: [Back End Repository](https://github.com/valentinem1/Travel-Advisor-Backend) and `cd` into it
+- Clone this following repo here: [Back End Repository](https://github.com/saimaar/Travel-Advisor-Backend) and `cd` into it
 - Run `bundle install` to install all required dependencies
 - Ensure you have PostgreSQL up and running
 - Run `rails db:create` to create the database locally
