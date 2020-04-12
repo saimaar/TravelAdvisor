@@ -10,6 +10,7 @@ class CommentForm extends Component {
   }
 
   handleChange = (event, { rating }) => {
+
     let {name, value} = event.target
 
     this.setState({

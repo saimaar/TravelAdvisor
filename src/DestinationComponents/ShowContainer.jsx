@@ -24,6 +24,7 @@ class ShowContainer extends Component {
   }
 
   createComment = (newComment) => {
+    debugger
     fetch('http://localhost:4000/reviews', {
       method: "POST",
       headers: {
