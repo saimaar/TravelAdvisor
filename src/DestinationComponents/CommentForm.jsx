@@ -9,15 +9,20 @@ class CommentForm extends Component {
     rating: 0
   }
 
-  handleChange = (event, { rating }) => {
-
+  handleChange = (event) => {
     let {name, value} = event.target
-
     this.setState({
         [name]: value,
-        rating
     })
 }
+
+handleRate=(evt)=>{
+  let rating = parseInt(evt.target.getAttribute("aria-posinset"))
+  this.setState({
+    rating
+  })
+}
+
 
   handleSubmit=(evt)=>{
     evt.preventDefault()
@@ -44,10 +49,9 @@ class CommentForm extends Component {
           className="comment-form-rating"
           icon="star"
           name="rating"
-          onRate={this.handleChange}
+          onRate={this.handleRate}
           maxRating={5}
           rating={this.state.rating}
-
         />
         <br/>
         <Button className="create-review-button" type='submit'>Submit</Button>
