@@ -6,7 +6,7 @@
   <img max-height: 90% width="100%" src="src/images/tone.gif" alt="gif of the app">
 </p>
   
-***➡️ Link to [Demo](https://www.youtube.com/watch?v=1ZLSS1F6WBs&t=1s)***<br/>
+***➡️ Link to [Demo](https://youtu.be/t04bmG8gYdw)***<br/>
 ***➡️ Link to [Live website](https://travel-advisor-app.herokuapp.com/)***<br/>
 
 
