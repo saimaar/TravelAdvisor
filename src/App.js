@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://traveladvisor-api.herokuapp.com/destinations`)
+    fetch(`http://localhost:4000/destinations`)
     .then(r => r.json())
     .then((destinations) => {
       this.setState({
@@ -28,7 +28,7 @@ class App extends Component {
     })
 
     if(localStorage.token){
-      fetch(`https://traveladvisor-api.herokuapp.com/persist`, {
+      fetch(`http://localhost:4000/persist`, {
         headers: {
           "Authorization": `bearer ${localStorage.token}`
         }
@@ -52,7 +52,7 @@ class App extends Component {
   }
 
   loginUser = (user) => {
-    fetch('https://traveladvisor-api.herokuapp.com/login', {
+    fetch('http://localhost:4000/login', {
       method: "POST",
       headers: {
         "content-type": "application/json"
