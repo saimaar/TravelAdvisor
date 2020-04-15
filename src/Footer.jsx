@@ -19,7 +19,7 @@ class Footer extends Component {
                     <Header className="footer-title">TravelAdvisor</Header>
                 </div>
                 <div className="ygl-btn">
-                <Button href="" circular color='youtube' icon='youtube' />
+                <Button href="https://youtu.be/t04bmG8gYdw" circular color='youtube' icon='youtube' />
                  <Button href="https://www.linkedin.com/in/saimi1992/" circular color='linkedin' icon='linkedin' />
                  <Button href="https://github.com/saimaar/TravelAdvisor" circular color="black" icon='github' />
                 </div>
