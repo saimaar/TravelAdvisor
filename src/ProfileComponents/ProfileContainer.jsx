@@ -10,7 +10,7 @@ class ProfileContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('https://traveladvidor-api.herokuapp.com/profile', {
+    fetch('https://traveladvisor-api.herokuapp.com/profile', {
       headers: {
         "Authorization": `bearer ${localStorage.token}`
       }
@@ -24,7 +24,7 @@ class ProfileContainer extends Component {
   }
 
   deleteBucketItem = (deletedId) => {
-    fetch(`https://traveladvidor-api.herokuapp.com/${deletedId}`, {
+    fetch(`https://traveladvisor-api.herokuapp.com/${deletedId}`, {
               method: "DELETE"
           })
           .then(r => r.json())
@@ -39,7 +39,7 @@ class ProfileContainer extends Component {
   }
 
   deleteProfile = (userId) => {
-    fetch(`https://traveladvidor-api.herokuapp.com/${userId}`, {
+    fetch(`https://traveladvisor-api.herokuapp.com/${userId}`, {
       method: "DELETE"
     })
     .then( r => r.json())
