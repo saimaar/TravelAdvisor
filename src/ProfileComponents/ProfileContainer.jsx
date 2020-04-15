@@ -10,7 +10,7 @@ class ProfileContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:4000/profile', {
+    fetch('https://traveladvidor-api.herokuapp.com/profile', {
       headers: {
         "Authorization": `bearer ${localStorage.token}`
       }
@@ -24,7 +24,7 @@ class ProfileContainer extends Component {
   }
 
   deleteBucketItem = (deletedId) => {
-    fetch(`http://localhost:4000/add_joiners/${deletedId}`, {
+    fetch(`https://traveladvidor-api.herokuapp.com/${deletedId}`, {
               method: "DELETE"
           })
           .then(r => r.json())
@@ -39,7 +39,7 @@ class ProfileContainer extends Component {
   }
 
   deleteProfile = (userId) => {
-    fetch(`http://localhost:4000/users/${userId}`, {
+    fetch(`https://traveladvidor-api.herokuapp.com/${userId}`, {
       method: "DELETE"
     })
     .then( r => r.json())

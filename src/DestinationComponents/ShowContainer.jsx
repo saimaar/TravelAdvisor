@@ -14,7 +14,7 @@ class ShowContainer extends Component {
 
   componentDidMount() {
     let destination_id = parseInt(this.props.routerProps.match.params.id)
-    fetch(`http://localhost:4000/destinations/${destination_id}`)
+    fetch(`https://traveladvidor-api.herokuapp.com/${destination_id}`)
     .then(r => r.json())
     .then(destination => {
       this.setState({
@@ -25,7 +25,7 @@ class ShowContainer extends Component {
 
   createComment = (newComment) => {
     debugger
-    fetch('http://localhost:4000/reviews', {
+    fetch('https://traveladvidor-api.herokuapp.com/reviews', {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -48,7 +48,7 @@ class ShowContainer extends Component {
   }
 
   deleteReview = (review_id) => {
-    fetch(`http://localhost:4000/reviews/${review_id}`, {
+    fetch(`https://traveladvidor-api.herokuapp.com/reviews/${review_id}`, {
       method: "DELETE"
     })
     .then(r => r.json())
@@ -62,7 +62,7 @@ class ShowContainer extends Component {
   }
 
   addToBucketList = (notifyAdd) => {
-      fetch('http://localhost:4000/add_joiners', {
+      fetch('https://traveladvidor-api.herokuapp.com/add_joiners', {
         method: "POST",
         headers: {
           "content-type": "application/json",
