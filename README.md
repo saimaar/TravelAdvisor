@@ -7,7 +7,7 @@
 </p>
   
 ***➡️ Link to [Demo](https://youtu.be/t04bmG8gYdw)***<br/>
-***➡️ Link to [Live website](https://travel-advisor-app.herokuapp.com/)***<br/>
+***➡️ Link to [Live website](https://traveladvisor-app.herokuapp.com/)***<br/>
 
 
 ## Features
