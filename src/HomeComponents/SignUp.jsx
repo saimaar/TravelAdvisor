@@ -20,7 +20,7 @@ class SignUp extends Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault()
-    fetch('http://localhost:4000/users', {
+    fetch('https://traveladvisor-api.herokuapp.com/users', {
       method: "POST",
       headers:{
         "Content-Type": "application/json",
